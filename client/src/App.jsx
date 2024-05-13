@@ -1,8 +1,7 @@
 import './App.css';
-import Nav from './Nav.jsx';
-import './nav.css';
-import Footer from './Footer.jsx';
-import './footer.css';
+//import Nav from './Nav.jsx';
+//import Footer from './Footer.jsx';
+
 
 import { Outlet } from 'react-router-dom';
 import { ApolloClient, ApoloProvider, InMemoryCache } from '@apollo/client';
