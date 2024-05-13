@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './Nav.jsx';
+import Nav from './Nav.jsx';
 import './nav.css';
 import Footer from './Footer.jsx';
 import './footer.css';
