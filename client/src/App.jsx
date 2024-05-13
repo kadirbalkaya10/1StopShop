@@ -1,5 +1,8 @@
 import './App.css';
+import Header from './Nav.jsx';
+import './nav.css';
 import Footer from './Footer.jsx';
+import './footer.css';
 
 import { Outlet } from 'react-router-dom';
 import { ApolloClient, ApoloProvider, InMemoryCache } from '@apollo/client';
@@ -13,8 +16,9 @@ function App() {
     return (
         <ApoloProvider client= {client}>
            <div>
-
-            <Outlet/>
+            <Nav />
+            <Outlet />
+            <Footer />
            </div>
         </ApoloProvider>
     )
