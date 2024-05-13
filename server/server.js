@@ -13,7 +13,7 @@ const server = new ApolloServer({
     resolvers,
 });
 
-const startApolloServer = async () = {
+const startApolloServer = async () => {
     await server.start();
 
 }
