@@ -24,23 +24,13 @@ type Apparel {
 
 type Query {
     user: User
-    apparel: [Apparel]
+    category: [category]
+    product(_id: ID!): Product
 }
 
 type Mutation {
     login(email: String!, password: String): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addApparel(category: [Number!], 
-        product: [{ 
-            productId: Number!,
-            product_name: String!,
-            stock: Number!,
-            image: String!}], 
-            
-        tag: [{
-            tagId: Number!,
-            tag_name: String!}] ): User
-    removeApparel(productId: ID!): User
 }
 `;
 
