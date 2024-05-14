@@ -1,0 +1,42 @@
+[
+    {
+        "category": "tops",
+        "name": "green-tee",
+        "description": "green oversized t-shirt",
+        "price": 24.99,
+        "image": "image",
+        "quantity": 10
+    },
+    {
+        "category": "tops",
+        "name": "baby-blue-tee",
+        "description": "blue crop top baby tee",
+        "price": 19.99,
+        "image": "image",
+        "quantity": 10
+    },
+    {
+        "category": "bottoms",
+        "name": "90s-denim",
+        "description": "straight leg denim jeans",
+        "price": 49.99,
+        "image": "image",
+        "quantity": 10
+    },
+    {
+        "category": "bottoms",
+        "name": "denim-shorts",
+        "description": "denim shorts, slightly distressed",
+        "price": 29.99,
+        "image": "image",
+        "quantity": 10
+    },
+    {
+        "category": "shoes",
+        "name": "cozy-shoes",
+        "description": "fluffy interior slipper-shoe with durable exterior",
+        "price": 79.99,
+        "image": "image",
+        "quantity": 20
+    }
+]
