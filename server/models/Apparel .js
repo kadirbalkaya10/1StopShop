@@ -7,13 +7,14 @@ const { Schema } = mongoose;
 // Defining the schema for the apparel collection
 const apparelScheme = new Schema({
 	category: {
-		type: Int,
+		type: Number,
 		required: true,
+        unique: true,
 	},
 	product: [
 		{
 			productId: {
-				type: Int,
+				type: Number,
 				required: true,
 			},
 			product_name: {
@@ -21,19 +22,22 @@ const apparelScheme = new Schema({
 				required: true,
 			},
 			price: {
-				type: Int,
+				type: Number,
 				required: true,
 			},
 			stock: {
-				type: Int,
+				type: Number,
 				required: true,
 			},
+            image: {
+                type: String,
+              },
 		},
 	],
 	Tag: [
 		{
 			tagId: {
-				type: Int,
+				type: Number,
 				required: true,
 			},
 			tag_name: {
