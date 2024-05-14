@@ -1,4 +1,3 @@
-import "./App.css";
 //import Nav from './Nav.jsx';
 //import Footer from './Footer.jsx';
 
@@ -15,7 +14,7 @@ function App() {
     <ApolloProvider client={client}>
       <div>
         {/* <Nav /> */}
-        <Outlet />
+        <Outlet className="p-5" />
         {/* <Footer /> */}
       </div>
     </ApolloProvider>
