@@ -1,0 +1,32 @@
+[
+    {
+        "firstName": "Maya",
+        "lastName": "Chakravarty",
+        "email": "mayachakra@gmail.com",
+        "password": "password123"
+    },
+    {
+        "firstName": "Kadir",
+        "lastName": "Balkaya",
+        "email": "kadirb@gmail.com",
+        "password": "password123"
+    },
+    {
+        "firstName": "Ethan",
+        "lastName": "Cespedes",
+        "email": "ethanc@gmail.com",
+        "password": "password123"
+    },
+    {
+        "firstName": "Pema",
+        "lastName": "Sherpa",
+        "email": "pemasherpa@gmail.com",
+        "password": "password123"
+    },
+    {
+        "firstName": "Nikola",
+        "lastName": "Muyot",
+        "email": "nikolam@gmail.com",
+        "password": "password123"
+    }
+]
