@@ -13,9 +13,10 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
+    "@apollo/server": "^4.10.4",
     "concurrently": "^8.2.2",
     "express": "^4.17.2",
-    "graphql": "^16.6.0",
+    "graphql": "^16.8.1",
     "mongoose": "^7.0.2"
   },
   "author": "",
