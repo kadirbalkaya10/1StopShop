@@ -112,6 +112,31 @@ const resolvers = {
         })
       }
       throw AuthenticationError;
+    },
+    updateProduct: async (parent, {_id, quantity}) => {
+      const decrement = Math.abs(quantity) * -1;
+
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $inc: { quantity: decrement } },
+        { new: true }
+      );
+    },
+    login: async (parent, {email, password}) => {
+        const user = User.findOne({email});
+        if (!user) {
+          throw AuthenticationError;
+        }
+
+        const correctPw = user.isCorrectPassword(password);
+        if(!correctPw){
+          throw AuthenticationError;
+        }
+
+        const token = signToken(user);
+
+        return { token, user };
+
     }
   }
 };
