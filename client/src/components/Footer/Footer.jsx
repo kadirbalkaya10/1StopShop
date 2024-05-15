@@ -1,4 +1,4 @@
-const Error = () => {
+const Footer = () => {
   return (
     <footer className='footer items-center p-4 bg-base-500 text-neutral-content flex justify-center'>
       <aside className='items-center grid-flow-col'>
@@ -18,4 +18,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default Footer;

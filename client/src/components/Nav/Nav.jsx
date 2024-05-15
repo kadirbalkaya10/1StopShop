@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <div className='skeleton w-full h-full min-h-screen flex flex-col justify-center items-center'>
+    <div className='skeleton w-full h-24 flex flex-col justify-center items-center'>
       <div className='navbar bg-base-500'>
         <div className='flex-1'>
           <a href='/' className='btn btn-ghost text-xl'>
