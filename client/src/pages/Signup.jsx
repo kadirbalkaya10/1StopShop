@@ -1,4 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
+
+import Auth from '../utils/auth';
 
 const Signup = () => {
   return (
