@@ -1,46 +1,46 @@
 // reference Login.jsx in module 24 solutions
 import { Link } from "react-router-dom";
 //add additional dependencies
-import { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+// import { useState } from 'react';
+// import { useMutation } from '@apollo/client';
+// import { LOGIN_USER } from '../utils/mutations';
+// import Auth from '../utils/auth';
 
 const Login = () => { //do we add props?
   //add code to
   //useState for form and useMutation for login
-  const [formState, setFormState] = useState({ email: '', password: ''});
-  const [login, {error, data}] = useMutation(LOGIN_USER);
+  // const [formState, setFormState] = useState({ email: '', password: ''});
+  // const [login, {error, data}] = useMutation(LOGIN_USER);
 
-  //update state on form input changes
-  handleChange
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  // //update state on form input changes
+  // handleChange
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
 
-  handleFormSubmit
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    console.log(formState);
-    try{
-      const { data } = await login({ //login from the auth.js
-        variables: {...formState},
-      });
-      Auth.login(data.login.token);
-    } catch (error){
-      console.error(error);
-    }
-     //clear form values with setFormState
-    setFormState({
-      email: '',
-      password: '',
-    });
-  }
+  // handleFormSubmit
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log(formState);
+  //   try{
+  //     const { data } = await login({ //login from the auth.js
+  //       variables: {...formState},
+  //     });
+  //     Auth.login(data.login.token);
+  //   } catch (error){
+  //     console.error(error);
+  //   }
+  //    //clear form values with setFormState
+  //   setFormState({
+  //     email: '',
+  //     password: '',
+  //   });
+  // }
 
   return (
     <section className='skeleton w-full h-screen flex justify-center items-center flex-col'>
