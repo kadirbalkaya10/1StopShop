@@ -40,6 +40,14 @@ const Signup = () => {
   return (
     <section className='flex justify-center items-center'>
       <div className='container skeleton border-2 border-primary w-11/12 h-screen flex justify-center items-center flex-col  mt-10'>
+       
+       {data? (
+        <p>
+          Sucess! You may nowhead {' '}
+          <Link to='/'>back to the homepage.</Link>
+        </p>
+       ) : (
+       
         <form onSubmit = {handleFormSubmit} action='submit' className='w-11/12 flex justify-center  flex-col'>
           <h1 className='text-4xl text-white text-center mb-12'>Sign Up</h1>
           <label className='input input-bordered bg-primary text-white flex items-center gap-2 m-3'>
@@ -92,9 +100,11 @@ const Signup = () => {
             Login
           </button>
         </form>
+       ) }
         <Link key={1} to={"/login"} className='mt-5 hover:text-orange-200'>
           Login instead
         </Link>
+        
       </div>
     </section>
   );
