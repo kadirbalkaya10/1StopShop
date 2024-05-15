@@ -34,7 +34,7 @@ const Nav = () => {
                 <a href='/login'>Login</a>
               </li>
               <li>
-                <a href='/singup'>Signup</a>
+                <a href='/signup'>Signup</a>
               </li>
             </ul>
           </div>
