@@ -1,6 +1,3 @@
-//import Nav from './Nav.jsx';
-//import Footer from './Footer.jsx';
-
 import { Outlet } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
@@ -12,11 +9,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div>
-        {/* <Nav /> */}
-        <Outlet />
-        {/* <Footer /> */}
-      </div>
+      <Nav />
+      <Outlet />
+      <Footer />
     </ApolloProvider>
   );
 }
