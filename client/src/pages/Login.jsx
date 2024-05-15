@@ -9,12 +9,18 @@ import { Link } from "react-router-dom";
 const Login = () => {
   //do we add props?
   //add code to
-  //useState for form and useMutation for login
+  //useState for form and useMutation for login seed-data
+  // const [formState, setFormState] = useState({ email: '', password: ''});
+  // const [login, {error, data}] = useMutation(LOGIN_USER);
+
+  // //update state on form input changes
+  // handleChange
+
   // const [formState, setFormState] = useState({ email: "", password: "" });
   // const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // //update state on form input changes
-  // handleChange;
+  // handleChange; main
   // const handleChange = (event) => {
   //   const { name, value } = event.target;
 
@@ -22,8 +28,25 @@ const Login = () => {
   //     ...formState,
   //     [name]: value,
   //   });
-  // };
-
+  // };-seed-data
+  // handleFormSubmit
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log(formState);
+  //   try{
+  //     const { data } = await login({ //login from the auth.js
+  //       variables: {...formState},
+  //     });
+  //     Auth.login(data.login.token);
+  //   } catch (error){
+  //     console.error(error);
+  //   }
+  //    //clear form values with setFormState
+  //   setFormState({
+  //     email: '',
+  //     password: '',
+  //   });
+  // }
   // handleFormSubmit;
   // const handleFormSubmit = async (event) => {
   //   event.preventDefault();
@@ -42,7 +65,7 @@ const Login = () => {
   //     email: "",
   //     password: "",
   //   });
-  // };
+  // }; main
 
   return (
     <section className='flex justify-center items-center'>
