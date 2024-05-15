@@ -1,6 +1,6 @@
 const Error = () => {
   return (
-    <div className="skeleton flex flex-col justify-center items-center h-screen bg-gray-100">
+    <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
@@ -11,6 +11,9 @@ const Error = () => {
       <p className="text-center text-lg text-gray-700">
         Oops you were not supposed to see this, Go back!
       </p>
+      <a href="/" className="btn btn-outline btn-primary border-black">
+        Home Page
+      </a>
     </div>
   );
 };
