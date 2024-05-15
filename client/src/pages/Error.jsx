@@ -1,6 +1,6 @@
 const Error = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
+    <div className="skeleton flex flex-col justify-center items-center h-screen bg-gray-100">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
