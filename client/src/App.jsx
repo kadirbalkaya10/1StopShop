@@ -14,7 +14,7 @@ function App() {
     <ApolloProvider client={client}>
       <div>
         {/* <Nav /> */}
-        <Outlet className="p-5" />
+        <Outlet />
         {/* <Footer /> */}
       </div>
     </ApolloProvider>
