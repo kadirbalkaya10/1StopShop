@@ -3,52 +3,22 @@ import React from "react";
 const Home = () => {
   return (
     <div className="skeleton w-full h-screen flex flex-col justify-center items-center">
-      {/* Navbar */}
-      <nav className="bg-white shadow-lg w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <a href="#" className="text-2xl font-bold text-gray-900">
-              1StopShop
-            </a>
-            <div className="hidden sm:flex sm:space-x-8">
-              <a
-                href="#"
-                className="text-gray-500 hover:text-gray-700 transition duration-300"
-              >
-                Tops
-              </a>
-              <a
-                href="#"
-                className="text-gray-500 hover:text-gray-700 transition duration-300"
-              >
-                Bottoms
-              </a>
-              <a
-                href="#"
-                className="text-gray-500 hover:text-gray-700 transition duration-300"
-              >
-                Shoes
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <header className="bg-white shadow flex-grow flex justify-center items-center w-full">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
             Discover Tops, Bottoms, and Shoes
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600">
             Explore our latest collection and find your style.
           </p>
+          <button className="btn btn-active mt-4">Find your style</button>
         </div>
       </header>
 
       {/* Feature Items */}
-      <section className="flex-grow w-full flex justify-center items-center overflow-hidden overflow-y">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex justify-center items-center overflow-y">
+      <section className="flex-grow w-full flex justify-center items-center py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div className="card card-compact w-full bg-base-100 shadow-xl rounded-t-xl">
               <img
