@@ -1,10 +1,43 @@
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const Signup = () => {
+
+  const [formState, setFormState] = useState({ firstName: "", lastName: "", email: "", password: "" });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+
+  //update state on form input changes
+  //handleChange; main
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    try {
+      const { data } = await addUser({
+        //login from the auth.js
+        variables: { ...formState },
+      });
+      //Auth.login(data.login.token); //do we keep this so when they sign up they're logged in
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+    //clear form values with setFormState
+  }; 
   return (
     <section className='flex justify-center items-center'>
       <div className='container skeleton border-2 border-primary w-11/12 h-screen flex justify-center items-center flex-col  mt-10'>
-        <form action='submit' className='w-11/12 flex justify-center  flex-col'>
+        <form onSubmit={handleFormSubmit} className='w-11/12 flex justify-center  flex-col'>
           <h1 className='text-4xl text-white text-center mb-12'>Sign Up</h1>
           <label className='input input-bordered bg-primary text-white flex items-center gap-2 m-3'>
             <svg
@@ -15,7 +48,14 @@ const Signup = () => {
               <path d='M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z' />
               <path d='M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z' />
             </svg>
-            <input type='text' className='grow ' placeholder='Email' />
+            <input 
+            type='text'
+            name="email"
+            value={formState.email}
+            onChange={handleChange} 
+            className='grow' 
+            placeholder='Email' 
+            />
           </label>
           <label className='input input-bordered flex items-center gap-2 bg-primary text-white m-3'>
             <svg
@@ -25,7 +65,14 @@ const Signup = () => {
               className='w-4 h-4 opacity-70'>
               <path d='M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z' />
             </svg>
-            <input type='text' className='grow' placeholder='First Name' />
+            <input 
+            type='text' 
+            name="firstName"
+            value={formState.firstName}
+            onChange={handleChange} 
+            className='grow' 
+            placeholder='First Name'
+            />
           </label>
           <label className='input input-bordered flex items-center gap-2 bg-primary text-white m-3'>
             <svg
@@ -35,7 +82,13 @@ const Signup = () => {
               className='w-4 h-4 opacity-70'>
               <path d='M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z' />
             </svg>
-            <input type='text' className='grow' placeholder='Last Name' />
+            <input 
+            type='text'
+            name="lastName"
+            value={formState.lastName}
+            onChange={handleChange}  
+            className='grow' 
+            placeholder='Last Name' />
           </label>
 
           <label className='input input-bordered flex bg-primary text-white items-center gap-2 m-3'>
@@ -50,7 +103,13 @@ const Signup = () => {
                 clipRule='evenodd'
               />
             </svg>
-            <input type='password' className='grow' value='password' />
+            <input 
+            type='password'
+            name="password"
+            value={formState.password} //was value = password
+            onChange={handleChange}  
+            className='grow' 
+            />
           </label>
           <button className='btn btn-primary gap-2 m-3 h-12  bg-primary text-white  btn-xs sm:btn-sm md:btn-md lg:btn-lg'>
             Login

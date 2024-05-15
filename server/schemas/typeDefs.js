@@ -1,7 +1,8 @@
+//  had this in Query: categories: [Category]
 const typeDefs = `
 type Category {
-    _id:ID
-    name:String
+    _id:ID!
+    name:String!
 }
 type Product {
     _id:ID
@@ -43,7 +44,7 @@ type Checkout {
   }
 
   type Query {
-    categories: [Category]
+    category(_id:ID!): Category
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
     user: User
