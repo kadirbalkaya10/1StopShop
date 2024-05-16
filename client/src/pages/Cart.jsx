@@ -36,7 +36,27 @@ const Cart = () => {
       <div className="flex justify-center items-center p-4 text-base-content">
         <aside className="flex items-center">
           <p className="text-xl font-bold mr-4">Total: $45.98</p>
-          <button className="btn btn-active">Checkout</button>
+          <button
+            className="btn btn-active"
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+          >
+            Checkout
+          </button>
+          <dialog
+            id="my_modal_5"
+            className="modal modal-bottom sm:modal-middle"
+          >
+            <div className="modal-box">
+              <h3 className="font-bold text-lg">Checkout Complete</h3>
+              <p className="py-4">Thanks for your purchase</p>
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </aside>
       </div>
     </div>
