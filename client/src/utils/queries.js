@@ -2,6 +2,7 @@
 import { gql } from '@apollo/client';
 
 //query of product
+//works for all but i think should just be one?
 export const QUERY_PRODUCTS = gql`
 	query getProducts($category: ID) {
 		products(category: $category) {
@@ -18,6 +19,7 @@ export const QUERY_PRODUCTS = gql`
 	}
 `;
 //query to checkout
+//not working
 export const QUERY_CHECKOUT = gql`
 	query getCheckout($products: [ProductInput]) {
 		checkout(products: $products) {
@@ -26,8 +28,9 @@ export const QUERY_CHECKOUT = gql`
 	}
 `;
 //query for all products
+//works, shows all products
 export const QUERY_ALL_PRODUCTS = gql`
-  {
+  query getProducts($category: ID, $name: String){
     products {
       _id
       name
@@ -42,7 +45,7 @@ export const QUERY_ALL_PRODUCTS = gql`
 `;
 //query of category
 export const QUERY_CATEGORIES = gql`
-  {
+  query getCategories($_id:ID!){
     categories {
       _id
       name
