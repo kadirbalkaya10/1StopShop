@@ -35,7 +35,7 @@ const productSchema = new Schema({
 });
 
 // Creating a model named "Apparel" based on the userSchema
-const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema, 'Product');
 
 // Exporting the Apparel model
 module.exports = Product;

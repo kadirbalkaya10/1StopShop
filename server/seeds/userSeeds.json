@@ -2,31 +2,31 @@
     {
         "firstName": "Maya",
         "lastName": "Chakravarty",
-        "email": "mayachakra@gmail.com",
+        "email": "maya_chakra@gmail.com",
         "password": "password123"
     },
     {
         "firstName": "Kadir",
         "lastName": "Balkaya",
-        "email": "kadirb@gmail.com",
+        "email": "kadir_b@gmail.com",
         "password": "password123"
     },
     {
         "firstName": "Ethan",
         "lastName": "Cespedes",
-        "email": "ethanc@gmail.com",
+        "email": "cespedes_ethan@gmail.com",
         "password": "password123"
     },
     {
         "firstName": "Pema",
         "lastName": "Sherpa",
-        "email": "pemasherpa@gmail.com",
+        "email": "sherpa_pema@gmail.com",
         "password": "password123"
     },
     {
         "firstName": "Nikola",
         "lastName": "Muyot",
-        "email": "nikolam@gmail.com",
+        "email": "nikola_m@gmail.com",
         "password": "password123"
     }
 ]

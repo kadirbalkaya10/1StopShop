@@ -6,13 +6,27 @@ const productSeeds = require('./productSeeds.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
-  await cleanDB('User', 'user'); //maybe capitalize second one
-  await cleanDB('Category', 'category');
-  await cleanDB('Product', 'product');
+  await cleanDB('User', 'users'); //maybe capitalize second one
+  await cleanDB('Category', 'categories');
+  await cleanDB('Product', 'products');
+  
+  // await cleanDB('User', 'user'); //maybe capitalize second one
+  // await cleanDB('Category', 'category');
+  // await cleanDB('Product', 'product');
+
+
+  
+  
+  //creating categories for products
+  const categories = await Category.create(categorySeeds);
+  const mappedProductSeeds = productSeeds.map(product => {
+    const categoryName = product.category;
+    const category = categories.find(cat => cat.name === categoryName);
+    return {...product, category: category ? category._id: null};
+  });
 
   await User.create(userSeeds);
-  await Category.create(categorySeeds);
-  await Product.create(productSeeds);
+  await Product.create(mappedProductSeeds);
 
   console.log('all done!');
   process.exit(0);
