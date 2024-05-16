@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -26,7 +25,7 @@ const Cart = () => {
                 </p>
                 <div className="card-actions flex justify-between items-center mt-4">
                   <p className="text-white">$25.99</p>
-                  <button className="btn btn-primary">Remove</button>
+                  <button className="btn btn-active">Remove</button>
                 </div>
               </div>
             </div>
