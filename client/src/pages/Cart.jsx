@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   return (
@@ -51,8 +52,10 @@ const Cart = () => {
               <p className="py-4">Thanks for your purchase</p>
               <div className="modal-action">
                 <form method="dialog">
-                  {/* if there is a button in form, it will close the modal */}
-                  <button className="btn">Close</button>
+                  <Link to="/">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Back to homepage</button>
+                  </Link>
                 </form>
               </div>
             </div>
