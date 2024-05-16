@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
     <div className="skeleton w-full h-24 flex flex-col justify-center items-center">
       <div className="navbar bg-base-500">
         <div className="flex-1">
-          <a href="/" className="btn btn-ghost text-xl">
+          <Link to="/" className="btn btn-ghost text-xl">
             1StopShop
-          </a>
+          </Link>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -34,10 +36,10 @@ const Nav = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a href="/login">Login</a>
+                <Link to="/login">Login</Link>
               </li>
               <li>
-                <a href="/signup">Signup</a>
+                <Link to="/signup">Signup</Link>
               </li>
             </ul>
           </div>
@@ -72,11 +74,11 @@ const Nav = () => {
               <div className="card-body">
                 <span className="font-bold text-lg"># Items</span>
                 <span className="text-info">Subtotal: $0</span>
-                <a href="/cart" className="card-actions">
+                <Link to="/cart" className="card-actions">
                   <button className="btn btn-primary btn-block">
                     View cart
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
