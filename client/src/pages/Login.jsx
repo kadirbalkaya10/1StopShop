@@ -1,10 +1,10 @@
 // reference Login.jsx in module 24 solutions
 import { Link } from "react-router-dom";
 //add additional dependencies
-import { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 const Login = () => {
   //do we add props?
@@ -25,7 +25,7 @@ const Login = () => {
       ...formState,
       [name]: value,
     });
-  };-seed-data
+  };
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -43,12 +43,14 @@ const Login = () => {
       email: "",
       password: "",
     });
-  }; main
+  };
 
   return (
     <section className='flex justify-center items-center'>
       <div className='container skeleton border-2 border-primary w-11/12 h-screen flex justify-center items-center flex-col  mt-10'>
-        <form onSubmit={handleFormSubmit} className='w-11/12 flex justify-center flex-col'>
+        <form
+          onSubmit={handleFormSubmit}
+          className='w-11/12 flex justify-center flex-col'>
           <h1 className='text-4xl text-white mb-12 text-center'>Login</h1>
           <label className='input input-bordered bg-primary text-white flex items-center gap-2 m-3'>
             <svg
@@ -60,13 +62,13 @@ const Login = () => {
               <path d='M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z' />
             </svg>
             <input
-             type='text'
-             name='email'
-             value={formState.email}
-             onChange={handleChange} 
-             className='grow '
-             placeholder='Email' 
-             />
+              type='text'
+              name='email'
+              value={formState.email}
+              onChange={handleChange}
+              className='grow '
+              placeholder='Email'
+            />
           </label>
 
           <label className='input input-bordered flex bg-primary text-white items-center gap-2 m-3'>
@@ -81,13 +83,13 @@ const Login = () => {
                 clipRule='evenodd'
               />
             </svg>
-            <input 
-            type='password' 
-            name='password'
-             value={formState.password}
-             onChange={handleChange} 
-            className='grow' 
-            placeholder='Password' 
+            <input
+              type='password'
+              name='password'
+              value={formState.password}
+              onChange={handleChange}
+              className='grow'
+              placeholder='Password'
             />
           </label>
           <button className='btn btn-primary gap-2 m-3 h-12  bg-primary text-white  btn-xs sm:btn-sm md:btn-md lg:btn-lg'>
