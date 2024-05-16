@@ -2,7 +2,7 @@
 import { gql } from '@apollo/client';
 
 //query of product
-//works for all but i think should just be one?
+//works
 export const QUERY_PRODUCTS = gql`
   query Product($id: ID!) {
     product(_id: $id) {
@@ -29,7 +29,7 @@ export const QUERY_CHECKOUT = gql`
 	}
 `;
 //query for all products
-//works, shows all products
+//works
 export const QUERY_ALL_PRODUCTS = gql`
   query Products {
     products {
@@ -57,24 +57,18 @@ export const QUERY_CATEGORIES = gql`
   }
 `;
 //query of user
-//does not work
+//works
 export const QUERY_USER = gql`
   query getUser{
     user{
       firstName
       lastName
-      data{
-        orders{
-          _id
-        purchaseDate
+      email
+      _id
+      orders {
+        _id
         products {
           _id
-          name
-          description
-          price
-          quantity
-          image
-        }
         }
       }
     }

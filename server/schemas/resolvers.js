@@ -93,13 +93,25 @@ const resolvers = {
     },
     addOrder: async (parent, { products }, context) => {
       if (context.user) {
-        const order = new Order({ products });
 
+        // create an order with that product
+        const order = await Order.create({
+          products
+        })
+        
+        // update user with the order
         await User.findByIdAndUpdate(context.user._id, {
           $push: { orders: order },
         });
 
-        return order;
+        const populatedOrder = await order.populate({
+          path: 'products',
+          populate: {
+            path: 'category'
+          }
+        });
+
+        return populatedOrder
       }
       throw AuthenticationError;
     },

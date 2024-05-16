@@ -1,5 +1,6 @@
 //  had this in Query: categories: [Category]
 const typeDefs = `
+
 type Category {
     _id:ID!
     name:String!
@@ -16,7 +17,7 @@ type Product {
 
 type Order {
     _id:ID
-    purchaseDate:String
+    purchasedDate:String
     products: [Product]
 }
 type User {
