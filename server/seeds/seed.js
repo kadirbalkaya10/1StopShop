@@ -6,9 +6,9 @@ const productSeeds = require('./productSeeds.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
-  await cleanDB('User', 'users'); //maybe capitalize second one
-  await cleanDB('Category', 'categories');
-  await cleanDB('Product', 'products');
+  // await cleanDB('User', 'users'); //maybe capitalize second one
+  // await cleanDB('Category', 'categories');
+  // await cleanDB('Product', 'products');
   
   // await cleanDB('User', 'user'); //maybe capitalize second one
   // await cleanDB('Category', 'category');

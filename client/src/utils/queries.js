@@ -4,24 +4,25 @@ import { gql } from '@apollo/client';
 //query of product
 //works for all but i think should just be one?
 export const QUERY_PRODUCTS = gql`
-	query getProducts($category: ID) {
-		products(category: $category) {
-			_id
-			name
-			description
-			image
-			quantity
-			price
-			category {
-				_id
-			}
-		}
-	}
+  query Product($id: ID!) {
+    product(_id: $id) {
+      _id
+      category {
+        _id
+        name
+      }
+      description
+      image
+      name
+      price
+      quantity
+    }
+  }
 `;
 //query to checkout
-//not working
+//does not work
 export const QUERY_CHECKOUT = gql`
-	query getCheckout($products: [ProductInput]) {
+	query getCheckout($products: [ProductInput!]) {
 		checkout(products: $products) {
 			session
 		}
@@ -30,36 +31,41 @@ export const QUERY_CHECKOUT = gql`
 //query for all products
 //works, shows all products
 export const QUERY_ALL_PRODUCTS = gql`
-  query getProducts($category: ID, $name: String){
+  query Products {
     products {
-      _id
+    _id
+    category {
       name
-      description
-      price
-      quantity
-      category {
-        name
-      }
+      _id
+    }
+    description
+    image
+    name
+    price
+    quantity
     }
   }
 `;
 //query of category
+//works
 export const QUERY_CATEGORIES = gql`
-  query getCategories($_id:ID!){
-    categories {
+  query getCategories($id: ID!){
+    category(_id: $id) {
       _id
       name
-    }
+    } 
   }
 `;
 //query of user
+//does not work
 export const QUERY_USER = gql`
-  {
-    user {
+  query getUser{
+    user{
       firstName
       lastName
-      orders {
-        _id
+      data{
+        orders{
+          _id
         purchaseDate
         products {
           _id
@@ -68,6 +74,7 @@ export const QUERY_USER = gql`
           price
           quantity
           image
+        }
         }
       }
     }

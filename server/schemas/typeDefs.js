@@ -34,6 +34,7 @@ type Checkout {
     token: ID
     user: User
   }
+  
   input ProductInput {
     _id: ID
     purchaseQuantity: Int
@@ -45,11 +46,12 @@ type Checkout {
 
   type Query {
     category(_id:ID!): Category
-    products(category: ID, name: String): [Product]
+    products: [Product]
     product(_id: ID!): Product
     user: User
     order(_id: ID!): Order
     checkout(products: [ProductInput]): Checkout
+    users: [User]
   }
 
   type Mutation {

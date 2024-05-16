@@ -13,30 +13,28 @@ const resolvers = {
     category: async (_, { _id }) => {
       return await Category.findById({ _id });
     },
-    products: async (parent, { category, name }) => {
-      const params = {};
+    products: async (_, ) => {
+      // const params = {};
 
-      if (category) {
-        params.category = category;
-      }
-      if (name) {
-        params.name = {
-          $regex: name,
-        };
-      }
-      return await Product.find(params).populate("category");
+      // if (category) {
+      //   params.category = category;
+      // }
+      // if (name) {
+      //   params.name = {
+      //     $regex: name,
+      //   };
+      // }
+      return await Product.find().populate("category");
     },
     product: async (parent, { _id }) => {
-      return await Product.find(_id).populate("category");
+      console.log(_id);
+      return await Product.findOne({_id}).populate("category");
     },
+    users: async () => await User.find(),
     user: async (parent, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        });
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
-
+        const user = await User.findById(context.user._id).populate("orders");
+        // user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
         return user;
       }
       throw AuthenticationError;
@@ -125,6 +123,7 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       try {
         const user = await User.findOne({ email });
+        console.log(user);
         if (!user) {
           throw AuthenticationError;
         }
@@ -135,7 +134,7 @@ const resolvers = {
         }
 
         const token = signToken(user);
-
+        console.log("Token: ", token)
         return { token, user };
       } catch (error) {
         console.log(error);
