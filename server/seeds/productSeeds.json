@@ -1,7 +1,7 @@
 [
     {
         "category": "tops",
-        "name": "green-tee",
+        "name": "green-tee-top",
         "description": "green oversized t-shirt",
         "price": 24.99,
         "image": "image",
@@ -9,7 +9,7 @@
     },
     {
         "category": "tops",
-        "name": "baby-blue-tee",
+        "name": "baby-blue-top",
         "description": "blue crop top baby tee",
         "price": 19.99,
         "image": "image",
@@ -17,7 +17,7 @@
     },
     {
         "category": "bottoms",
-        "name": "90s-denim",
+        "name": "90s-denim-bottoms",
         "description": "straight leg denim jeans",
         "price": 49.99,
         "image": "image",

@@ -10,8 +10,8 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 const resolvers = {
 	//Queries
 	Query: {
-		category: async () => {
-			return await Category.find({});
+		category: async (_, { _id }) => {
+			return await Category.findById({_id});
 		},
 		products: async (parent, { category, name }) => {
 			const params = {};
