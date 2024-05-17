@@ -10,11 +10,6 @@ db.once('open', async () => {
   await cleanDB('Category', 'Category');
   await cleanDB('Product', 'Product');
 
-  // await cleanDB('User', 'users'); //maybe capitalize second one
-  // await cleanDB('Category', 'categories');
-  // await cleanDB('Product', 'products');
-
-  
   //creating categories for products
   const categories = await Category.create(categorySeeds);
   const mappedProductSeeds = productSeeds.map(product => {

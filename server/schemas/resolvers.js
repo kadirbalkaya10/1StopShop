@@ -14,16 +14,7 @@ const resolvers = {
       return await Category.findById({ _id });
     },
     products: async (_) => {
-      // const params = {};
-
-      // if (category) {
-      //   params.category = category;
-      // }
-      // if (name) {
-      //   params.name = {
-      //     $regex: name,
-      //   };
-      // }
+     
       return await Product.find().populate("category");
     },
     product: async (parent, { _id }) => {
