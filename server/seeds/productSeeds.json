@@ -20,7 +20,7 @@
         "name": "90s-denim-bottoms",
         "description": "straight leg denim jeans",
         "price": 49.99,
-        "image": "/90sjeans.webp",
+        "image": "/jeans.webp",
         "quantity": 10
     },
     {
@@ -28,7 +28,7 @@
         "name": "denim-shorts",
         "description": "denim shorts, slightly distressed",
         "price": 29.99,
-        "image": "/denimshorts.webp",
+        "image": "/shorts.webp",
         "quantity": 10
     },
     {
@@ -36,7 +36,7 @@
         "name": "cozy-shoes",
         "description": "fluffy interior slipper-shoe with durable exterior",
         "price": 79.99,
-        "image": "/cozyshoes.jpg",
+        "image": "/shoes.jpg",
         "quantity": 20
     }
 ]
