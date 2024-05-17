@@ -1,106 +1,154 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import wallpaper from "../assets/images/wallpaper.png";
-import frameImg from "../assets/images/frame.png";
 import womenModel from "../assets/images/womenModel.png";
+import section1Img from "../assets/images/section1.png";
+import section2Img from "../assets/images/section2.png";
+import ShowreelButton from "../components/Button/ShowreelButton";
 
 const Home = () => {
   return (
-    <div className='skeleton w-full h-full min-h-screen flex flex-col justify-center items-center'>
+    <>
       {/* Hero Section */}
-      <header className='bg-white shadow  flex   w-screen h-screen relative overflow-hidden'>
+      <header className='bg-white shadow flex flex-col min-w-full h-screen relative overflow-hidden'>
         <img
           src={wallpaper}
           alt='wallpaper'
-          className='w-screen h-screen absolute z-0 top-0 left-0 object-cover max-w-max opacity-90'
+          className='w-full h-full absolute z-0 top-0 left-0 object-cover opacity-90'
         />
-        <div className='  py-8 px-4 sm:px-6 lg:px-8  w-full h-screen text-center z-10 flex   justify-center  items-center flex-wrap  md:flex-nowrap '>
-          <div className='container'>
-            <h1 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-4 z-10'>
-              Discover Tops, Bottoms, and Shoes
+        <div className='py-8 px-4 sm:px-6 lg:px-8 w-full h-full text-center z-10 flex justify-center items-center flex-wrap md:flex-nowrap'>
+          <div className='container relative z-20'>
+            <h1 className='text-4xl sm:text-6xl font-bold text-gray-900 mb-6 sm:mb-4'>
+              Welcome to our Boutique Store!
             </h1>
-            <p className='text-base sm:text-lg text-gray-600 z-10'>
-              Explore our latest collection and find your style.
+            <p className='text-base sm:text-lg text-gray-900'>
+              Discover timeless elegance and unique style at our boutique shop.
+              Explore our curated collection of fashion-forward pieces,
+              handpicked just for you.
             </p>
-            <button className='btn btn-active mt-4'>Find your style</button>
+            <ShowreelButton />
           </div>
-          <div className='overflow-hidden relative'>
+          <div className='overflow-hidden relative z-20'>
             <img
               src={womenModel}
               alt='frame'
-              className='w-full object-cover  fill-white'
+              className='w-full object-cover fill-white'
             />
           </div>
         </div>
       </header>
 
-      {/* Feature Items */}
-      <section className='flex-grow w-full flex justify-center items-center py-12'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-4xl text-white font-bold mb-4 text-center'>
-            Featured Items
-          </h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
-            <div className='card card-compact w-full bg-base-100 shadow-xl rounded-t-xl'>
-              <img
-                src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
-                alt='Clothing 1'
-                className='w-full h-48 object-cover rounded-t-xl'
-              />
-              <div className='card-body bg-gray-800 p-4 rounded-b-xl'>
-                <h2 className='card-title text-white'>Clothing 1</h2>
-                <p className='text-white'>A description of the item.</p>
-                <div className='card-actions justify-end'>
-                  <button className='btn btn-primary'>Buy Now</button>
-                </div>
-              </div>
-            </div>
-            <div className='card card-compact w-full bg-base-100 shadow-xl rounded-t-xl'>
-              <img
-                src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
-                alt='Clothing 2'
-                className='w-full h-48 object-cover rounded-t-xl'
-              />
-              <div className='card-body bg-gray-800 p-4 rounded-b-xl'>
-                <h2 className='card-title text-white'>Clothing 2</h2>
-                <p className='text-white'>A description of the item.</p>
-                <div className='card-actions justify-end'>
-                  <button className='btn btn-primary'>Buy Now</button>
-                </div>
-              </div>
-            </div>
-            <div className='card card-compact w-full bg-base-100 shadow-xl rounded-t-xl'>
-              <img
-                src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
-                alt='Clothing 3'
-                className='w-full h-48 object-cover rounded-t-xl'
-              />
-              <div className='card-body bg-gray-800 p-4 rounded-b-xl'>
-                <h2 className='card-title text-white'>Clothing 3</h2>
-                <p className='text-white'>A description of the item.</p>
-                <div className='card-actions justify-end'>
-                  <button className='btn btn-primary'>Buy Now</button>
-                </div>
-              </div>
-            </div>
-            <div className='card card-compact w-full bg-base-100 shadow-xl rounded-t-xl'>
-              <img
-                src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
-                alt='Clothing 4'
-                className='w-full h-48 object-cover rounded-t-xl'
-              />
-              <div className='card-body bg-gray-800 p-4 rounded-b-xl'>
-                <h2 className='card-title text-white'>Clothing 4</h2>
-                <p className='text-white'>A description of the item.</p>
-                <div className='card-actions justify-end'>
-                  <button className='btn btn-primary'>Buy Now</button>
-                </div>
-              </div>
-            </div>
+      <main>
+        {/* Section 1 */}
+        <section className='w-full h-screen flex justify-center items-center relative'>
+          <img
+            src={section1Img}
+            alt='section1'
+            className='w-full h-full absolute z-0 top-0 left-0 object-cover opacity-90'
+          />
+          <div className='relative z-20 text-center'>
+            <h1 className='text-xl text-orange-300'>Find Unique Designs</h1>
+            <h2 className='text-4xl lg:text-4xl text-orange-300'>
+              Discover hand craftsmanship
+            </h2>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Section 2 */}
+        <section className='w-full h-screen flex justify-center items-center relative'>
+          <img
+            src={section2Img}
+            alt='section2'
+            className='w-full h-full absolute z-0 top-0 left-0 object-cover opacity-90'
+          />
+          <div className='absolute bottom-20 right-20 z-20 text-right'>
+            <h2 className='text-xl text-teal-300'>Designed by Maya</h2>
+            <h1 className='text-4xl sm:text-8xl text-teal-200'>
+              DISCOUNT FOR T-SHIRTS
+            </h1>
+          </div>
+        </section>
+
+        {/* Feature Items */}
+        <section className='w-full flex flex-col justify-around items-center py-20 skeleton   '>
+          <h1 className='text-4xl sm:text-8xl mb-12 text-orange-200'>
+            Featured Items
+          </h1>
+          <div className='grid mt-12 lg:grid-cols-4 mx-auto p-10 gap-6'>
+            <a href='#'>
+              <img
+                src={section1Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 rotate-12 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product1'
+              />
+            </a>
+            <a href='#'>
+              <img
+                src={section2Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 -rotate-12 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product2'
+              />
+            </a>
+            <a href='#'>
+              <img
+                src={section2Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 rotate-12 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product3'
+              />
+            </a>
+            <a href='#'>
+              <img
+                src={section1Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 -rotate-6 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product4'
+              />
+            </a>
+          </div>
+        </section>
+      </main>
+      <style jsx>{`
+        @keyframes autoRotate {
+          0%,
+          100% {
+            transform: rotate(-12) scale(1);
+          }
+          50% {
+            transform: rotate(0) scale(1.1);
+          }
+        }
+
+        .feature-item {
+          transition: transform 0.5s;
+        }
+
+        .feature-item:hover,
+        .feature-item:active {
+          transform: rotate(0) scale(1.1) translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+          .feature-item {
+            animation: autoRotate 5s infinite;
+          }
+
+          .feature-item:nth-child(1) {
+            animation-delay: 0s;
+          }
+
+          .feature-item:nth-child(2) {
+            animation-delay: 1s;
+          }
+
+          .feature-item:nth-child(3) {
+            animation-delay: 2s;
+          }
+
+          .feature-item:nth-child(4) {
+            animation-delay: 3s;
+          }
+        }
+      `}</style>
+    </>
   );
 };
 
