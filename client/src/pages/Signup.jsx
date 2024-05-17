@@ -23,17 +23,27 @@ const Signup = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
-    try {
-      const { data } = await addUser({
-        //login from the auth.js
-        variables: { ...formState },
-      });
-      //Auth.login(data.login.token); //do we keep this so when they sign up they're logged in
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
+    // try {
+    //   const { data } = await addUser({
+    //     //login from the auth.js
+    //     variables: { ...formState },
+    //   });
+    //   //Auth.login(data.login.token); //do we keep this so when they sign up they're logged in
+    //   console.log(data);
+    // } catch (error) {
+    //   console.error(error);
+    // }
     //clear form values with setFormState
+    const mutationResponse = await addUser({
+      variables: {
+      email: formState.email,
+      firstName: formState.firstName,
+      lastName: formState.lastName,
+      password: formState.password,
+    },
+  });
+  const token = mutationResponse.data.addUser.token;
+  Auth.login(token);
   }; 
   return (
     <section className='flex justify-center items-center'>
