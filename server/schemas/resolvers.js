@@ -17,7 +17,7 @@ const resolvers = {
      
       return await Product.find().populate("category");
     },
-    product: async (parent, { _id }) => {
+    product: async (parent, { _id }) => { //to find one by id
       console.log(_id);
       return await Product.findOne({ _id }).populate("category");
     },
@@ -122,7 +122,7 @@ const resolvers = {
         { new: true }
       );
     },
-    login: async (parent, { email, password }) => {
+    login: async (parent, { email, password }) => { //logs in user based on email and password and checks password as it is hashed upon signup
       try {
         const user = await User.findOne({ email });
         console.log(user);
