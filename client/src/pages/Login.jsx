@@ -1,24 +1,19 @@
 /* eslint-disable no-unused-vars */
 // reference Login.jsx in module 24 solutions
 import { Link } from "react-router-dom";
-//add additional dependencies
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const Login = () => {
-  //do we add props?
-  //add code to
   //useState for form and useMutation for login seed-data
   //update state on form input changes
-  //handleChange
 
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   //update state on form input changes
-  //handleChange; main
   const handleChange = (event) => {
     const { name, value } = event.target;
 
