@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // reference Login.jsx in module 24 solutions
 import { Link } from "react-router-dom";
 //add additional dependencies
