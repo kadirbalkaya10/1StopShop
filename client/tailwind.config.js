@@ -6,7 +6,11 @@ export default {
     "node_modules/react-daisyui/dist/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        philosopher: ["Philosopher", "sans-serif"],
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
