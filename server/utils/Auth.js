@@ -24,7 +24,6 @@ module.exports = {
       token = token.split(" ").pop().trim();
     }
 
-    // If no token found, return the request object
     if (!token) {
       return req;
     }
@@ -32,14 +31,11 @@ module.exports = {
     try {
       // If no token found, return the request object
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      // Assigning user data to request object
       req.user = data;
     } catch {
-      // Logging error for invalid token
       console.log("Invalid token");
     }
 
-    // Returning request object
     return req;
   },
   // Function for signing JWT with user data
