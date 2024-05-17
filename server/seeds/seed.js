@@ -7,8 +7,8 @@ const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
   await cleanDB('User', 'users'); //maybe capitalize second one
-  await cleanDB('Category', 'categories');
-  await cleanDB('Product', 'products');
+  await cleanDB('Category', 'Category');
+  await cleanDB('Product', 'Product');
   
   // await cleanDB('User', 'user'); //maybe capitalize second one
   // await cleanDB('Category', 'category');

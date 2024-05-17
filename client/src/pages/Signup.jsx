@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
@@ -115,12 +116,14 @@ const Signup = () => {
             Login
           </button>
         </form>
+       
         <Link key={1} to={"/login"} className='mt-5 hover:text-orange-200'>
           Login instead
         </Link>
+        
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Signup;
