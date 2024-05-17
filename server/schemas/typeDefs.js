@@ -1,5 +1,6 @@
 //  had this in Query: categories: [Category]
 const typeDefs = `
+
 type Category {
     _id:ID!
     name:String!
@@ -16,7 +17,7 @@ type Product {
 
 type Order {
     _id:ID
-    purchaseDate:String
+    purchasedDate:String
     products: [Product]
 }
 type User {
@@ -34,6 +35,7 @@ type Checkout {
     token: ID
     user: User
   }
+  
   input ProductInput {
     _id: ID
     purchaseQuantity: Int
@@ -45,11 +47,12 @@ type Checkout {
 
   type Query {
     category(_id:ID!): Category
-    products(category: ID, name: String): [Product]
+    products: [Product]
     product(_id: ID!): Product
     user: User
     order(_id: ID!): Order
     checkout(products: [ProductInput]): Checkout
+    users: [User]
   }
 
   type Mutation {

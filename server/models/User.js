@@ -27,6 +27,11 @@ const userSchema = new Schema({
     required: true,
     minLength: 5,
   },
+  //add products
+  orders: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Order',
+	}],
 });
 
 userSchema.pre("save", async function (next) {
