@@ -18,6 +18,8 @@ import ShowreelButton from "../components/Button/ShowreelButton";
               */
 
 const Home = () => {
+
+  {/* This allows for access to all the products which is used to display our inventory */}
   const { data, loading } = useQuery(QUERY_ALL_PRODUCTS);
   console.log(data);
   return (
@@ -87,6 +89,7 @@ const Home = () => {
           <h1 className='text-4xl sm:text-8xl mb-12 text-orange-200'>
             Featured Items
           </h1>
+        {/* Displays images to hover over to show our stock */}
           <div className='grid mt-12 lg:grid-cols-4 mx-auto p-10 gap-6'>
             <a href='#'>
               <img
@@ -123,7 +126,7 @@ const Home = () => {
           <h2 className='text-4xl text-white font-bold mb-4 text-center'>
             Our Inventory
           </h2>
-
+        {/* To dynamically produce cards based on our inventory */}
           <div className='flex flex-wrap justify-center items-center w-full h-full'>
             {data &&
               data.products.map((product, index) => {
