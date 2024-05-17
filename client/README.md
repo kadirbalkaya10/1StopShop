@@ -1,8 +1,43 @@
-# React + Vite
+## 1StopShop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Content
 
-Currently, two official plugins are available:
+- [Description](#description)
+- [Built With](#built-with)
+- [Installation](#installation)
+- [Contribution](#contribution)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+
+Welcome to 1StopShop, your ultimate destination for stylish, affordable fashion. We believe that looking good shouldn’t break the bank, so we offer a curated selection of high-fashion clothing for every style and occasion at unbeatable prices. Our user-friendly online platform offers a seamless shopping experience, featuring a curated selection of high-fashion clothing for every style and occasion.
+
+## Built with
+
+- DaisyUI
+- Tailwind CSS
+- HTML
+- JS
+- React + Vite
+- Node.js
+- Express.js
+- MongoDB
+- GraphQL
+
+## Installation
+
+- clone or fork repo
+- use npm init to get pacakge json
+- npm run render-build
+- npm run develop
+
+## Contribution
+
+- @kadirbalkaya10
+- @Pematamang111
+- @mayachakra
+- @EC1145
+
+## License
+
+We use the MIT License https://opensource.org/license/mit
