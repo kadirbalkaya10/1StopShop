@@ -1,10 +1,9 @@
 // Importing Mongoose library
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-
 // Destructuring Schema from mongoose
 const { Schema } = mongoose;
-// Defining the schema for the user collection
+
 const userSchema = new Schema({
   firstName: {
     type: String,
