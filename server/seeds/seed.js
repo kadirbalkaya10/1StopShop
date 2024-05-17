@@ -6,16 +6,14 @@ const productSeeds = require('./productSeeds.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
+  await cleanDB('User', 'users'); //maybe capitalize second one
+  await cleanDB('Category', 'Category');
+  await cleanDB('Product', 'Product');
+
   // await cleanDB('User', 'users'); //maybe capitalize second one
   // await cleanDB('Category', 'categories');
   // await cleanDB('Product', 'products');
-  
-  // await cleanDB('User', 'user'); //maybe capitalize second one
-  // await cleanDB('Category', 'category');
-  // await cleanDB('Product', 'product');
 
-
-  
   
   //creating categories for products
   const categories = await Category.create(categorySeeds);
