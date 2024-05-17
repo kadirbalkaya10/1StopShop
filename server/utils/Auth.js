@@ -6,7 +6,6 @@ const secret = "mysecretsshhhhh";
 // Expiration time for JWT
 const expiration = "2h";
 
-// Exporting module with defined functionalities
 module.exports = {
   // Custom GraphQL error for authentication failure
   AuthenticationError: new GraphQLError("Could not authenticate user.", {
