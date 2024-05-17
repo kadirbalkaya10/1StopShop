@@ -2,7 +2,7 @@
 // const { useBackgroundQuery } = require("@apollo/client");
 const { User, Product, Category, Order } = require("../models");
 //importing auth
-const { signToken, AuthenticationError } = require("../utils/auth.js");
+const { signToken, AuthenticationError } = require("../utils/Auth.js");
 //stripe for payment
 // const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -13,7 +13,7 @@ const resolvers = {
     category: async (_, { _id }) => {
       return await Category.findById({ _id });
     },
-    products: async (_, ) => {
+    products: async (_) => {
       // const params = {};
 
       // if (category) {
@@ -28,7 +28,7 @@ const resolvers = {
     },
     product: async (parent, { _id }) => {
       console.log(_id);
-      return await Product.findOne({_id}).populate("category");
+      return await Product.findOne({ _id }).populate("category");
     },
     users: async () => await User.find(),
     user: async (parent, args, context) => {
@@ -93,25 +93,24 @@ const resolvers = {
     },
     addOrder: async (parent, { products }, context) => {
       if (context.user) {
-
         // create an order with that product
         const order = await Order.create({
-          products
-        })
-        
+          products,
+        });
+
         // update user with the order
         await User.findByIdAndUpdate(context.user._id, {
           $push: { orders: order },
         });
 
         const populatedOrder = await order.populate({
-          path: 'products',
+          path: "products",
           populate: {
-            path: 'category'
-          }
+            path: "category",
+          },
         });
 
-        return populatedOrder
+        return populatedOrder;
       }
       throw AuthenticationError;
     },
@@ -146,7 +145,7 @@ const resolvers = {
         }
 
         const token = signToken(user);
-        console.log("Token: ", token)
+        console.log("Token: ", token);
         return { token, user };
       } catch (error) {
         console.log(error);
