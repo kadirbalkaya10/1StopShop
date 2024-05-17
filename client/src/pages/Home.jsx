@@ -75,7 +75,7 @@ const Home = () => {
         </section>
 
         {/* Feature Items */}
-        <section className='w-full flex flex-col justify-around items-center py-20 overflow-hidden'>
+        <section className='w-full flex flex-col justify-around items-center py-20 overflow-hidden skeleton'>
           <h1 className='text-4xl sm:text-8xl mb-12 text-orange-200'>
             Featured Items
           </h1>
@@ -112,7 +112,7 @@ const Home = () => {
           </div>
         </section>
         {/* Inventory */}
-        <section className='w-full flex flex-col justify-center items-center py-12'>
+        <section className='w-full flex flex-col justify-center items-center py-12 skeleton'>
           <h2 className='text-4xl text-white font-bold mb-4 text-center'>
             Our Inventory
           </h2>
