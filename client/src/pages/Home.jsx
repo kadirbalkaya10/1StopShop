@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { QUERY_ALL_PRODUCTS } from '../utils/queries';
+import { QUERY_ALL_PRODUCTS } from "../utils/queries";
 /* eslint-disable no-unused-vars */
 import React from "react";
 import wallpaper from "../assets/images/wallpaper.png";
@@ -9,7 +9,7 @@ import section2Img from "../assets/images/section2.png";
 import ShowreelButton from "../components/Button/ShowreelButton";
 
 //for image if needed
-            /*
+/*
               <img
                 src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
                 alt="Clothing 1"
@@ -18,12 +18,12 @@ import ShowreelButton from "../components/Button/ShowreelButton";
               */
 
 const Home = () => {
-  const {data, loading} = useQuery(QUERY_ALL_PRODUCTS);
+  const { data, loading } = useQuery(QUERY_ALL_PRODUCTS);
   console.log(data);
   return (
     <>
       {/* Hero Section */}
-      <header className='bg-white shadow flex flex-col min-w-full h-screen relative overflow-hidden'>
+      <header className='bg-white shadow flex flex-col w-full h-screen relative overflow-hidden'>
         <img
           src={wallpaper}
           alt='wallpaper'
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </header>
 
-      <main>
+      <main className='w-full'>
         {/* Section 1 */}
         <section className='w-full h-screen flex justify-center items-center relative'>
           <img
@@ -83,30 +83,72 @@ const Home = () => {
         </section>
 
         {/* Feature Items */}
-        <section className="flex-grow w-full flex justify-center items-center py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl text-white font-bold mb-4 text-center">
+        <section className='w-full flex flex-col justify-around items-center py-20 overflow-hidden'>
+          <h1 className='text-4xl sm:text-8xl mb-12 text-orange-200'>
+            Featured Items
+          </h1>
+          <div className='grid mt-12 lg:grid-cols-4 mx-auto p-10 gap-6'>
+            <a href='#'>
+              <img
+                src={section1Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 rotate-12 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product1'
+              />
+            </a>
+            <a href='#'>
+              <img
+                src={section2Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 -rotate-12 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product2'
+              />
+            </a>
+            <a href='#'>
+              <img
+                src={section2Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 rotate-12 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product3'
+              />
+            </a>
+            <a href='#'>
+              <img
+                src={section1Img}
+                className='feature-item rounded-xl w-full transform transition-transform duration-500 -rotate-6 hover:rotate-0 hover:scale-110 hover:-translate-y-2 active:rotate-0 active:scale-110 active:-translate-y-2 origin-bottom'
+                alt='Product4'
+              />
+            </a>
+          </div>
+        </section>
+        {/* Inventory */}
+        <section className='w-full flex flex-col justify-center items-center py-12'>
+          <h2 className='text-4xl text-white font-bold mb-4 text-center'>
             Our Inventory
           </h2>
-          {data &&
-           data.products.map((product, index) => {
-           return (
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'  key={index}>
-            <div className='card card-compact w-full bg-base-100 shadow-xl rounded-t-xl'>
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-t-xl" />
-              <div className='card-body bg-gray-800 p-4 rounded-b-xl'>
-                <h2 className='card-title text-white'>{product.name}</h2>
-                <p className='text-white'>{product.description}</p>
-                <div className='card-actions justify-end'>
-                  <button className='btn btn-primary'>Buy Now</button>
-                </div>
-              </div>
-            </div>
-            </div>
-           )
-          })}
-        </div>
-      </section>
+
+          <div className='flex flex-wrap justify-center items-center w-full h-full'>
+            {data &&
+              data.products.map((product, index) => {
+                return (
+                  <div className='card w-64 glass m-5' key={index}>
+                    <figure className='w-full'>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className='w-full object-cover'
+                      />
+                    </figure>
+                    <div className='card-body'>
+                      <h2 className='card-title'>{product.name}</h2>
+                      <p>{product.description}</p>
+                      <p>{product.price}</p>
+                      <div className='card-actions justify-end'>
+                        <button className='btn btn-primary'>Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </section>
       </main>
       <style jsx>{`
         @keyframes autoRotate {
