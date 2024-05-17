@@ -31,6 +31,10 @@ Welcome to 1StopShop, your ultimate destination for stylish, affordable fashion.
 - npm run render-build
 - npm run develop
 
+## Deployment Link
+
+- https://onestopshop-d956.onrender.com
+
 ## Contribution
 
 - @kadirbalkaya10
