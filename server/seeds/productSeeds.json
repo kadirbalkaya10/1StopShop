@@ -4,7 +4,7 @@
         "name": "green-tee-top",
         "description": "green oversized t-shirt",
         "price": 24.99,
-        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQGEAkzavRs9U7yb-uhLFEPRtO3Zh6gxcrrN3zhux82xegBXtOo1OvshSqkUD0BRzeELHDOmz_LiBY7rSJ8Dpsb758KFdO8S2xpcUEkWFE23QFdpNrT5eUBrG9F437c1mJwwQytHA&usqp=CAc",
+        "image": "/shopping.webp",
         "quantity": 10
     },
     {
@@ -20,7 +20,7 @@
         "name": "90s-denim-bottoms",
         "description": "straight leg denim jeans",
         "price": 49.99,
-        "image": "https://www.google.com/imgres?q=90s-denim-bottoms&imgurl=https%3A%2F%2Fcdn.mall.adeptmind.ai%2Fhttps%253A%252F%252Fslimages.macysassets.com%252Fis%252Fimage%252FMCY%252Fproducts%252F7%252Foptimized%252F25368177_fpx.tif%253Fwid%253D1200%2526fmt%253Djpeg%2526qlt%253D100_large.webp&imgrefurl=https%3A%2F%2Fwww.coolspringsgalleria.com%2Fproducts%2Fproduct%2Fcalvin-klein-big-boys-baggy-90s-denim-pants-macys-10b41f&docid=cZ3hjVqcAtnJVM&tbnid=tDXYJVbl9_3MCM&vet=12ahUKEwiJ2oXYyZKGAxWyElkFHdZ9BdYQM3oECHwQAA..i&w=818&h=1000&hcb=2&ved=2ahUKEwiJ2oXYyZKGAxWyElkFHdZ9BdYQM3oECHwQAA",
+        "image": "/90sjeans.webp",
         "quantity": 10
     },
     {
@@ -28,7 +28,7 @@
         "name": "denim-shorts",
         "description": "denim shorts, slightly distressed",
         "price": 29.99,
-        "image": "https://www.google.com/imgres?q=denim-shorts&imgurl=https%3A%2F%2Fscene7.zumiez.com%2Fis%2Fimage%2Fzumiez%2Fproduct_main_medium%2FDickies-Wingville-Blue-Denim-Shorts-_379739-alt1-US.jpg&imgrefurl=https%3A%2F%2Fwww.zumiez.com%2Fdickies-wingville-blue-denim-shorts.html&docid=SPqbzMpQp8q_rM&tbnid=_QtNN_CKcXUwwM&vet=12ahUKEwin05uFypKGAxUZMlkFHdxjAvoQM3oECE8QAA..i&w=530&h=630&hcb=2&ved=2ahUKEwin05uFypKGAxUZMlkFHdxjAvoQM3oECE8QAA",
+        "image": "/denimshorts.webp",
         "quantity": 10
     },
     {
@@ -36,7 +36,7 @@
         "name": "cozy-shoes",
         "description": "fluffy interior slipper-shoe with durable exterior",
         "price": 79.99,
-        "image": "https://www.google.com/imgres?q=cozy-shoes&imgurl=https%3A%2F%2Fimages.rogansshoes.com%2Ft_1000%2FSK_114270_CHE2.JPG&imgrefurl=https%3A%2F%2Fwww.rogansshoes.com%2Fskechers-bobs-skipper-wave-cozy-queen-casual-boots-womens&docid=hQH5vc24jZ09mM&tbnid=W6vheFsoxrgmQM&vet=12ahUKEwilqI-oypKGAxVyFVkFHeMtDgEQM3oECCMQAA..i&w=1000&h=1000&hcb=2&ved=2ahUKEwilqI-oypKGAxVyFVkFHeMtDgEQM3oECCMQAA",
+        "image": "/cozyshoes.jpg",
         "quantity": 20
     }
 ]

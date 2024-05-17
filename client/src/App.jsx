@@ -12,6 +12,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {/* <Nav /> */}
+      <Nav />
       <Outlet />
       <Footer />
     </ApolloProvider>
