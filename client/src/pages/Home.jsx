@@ -8,17 +8,7 @@ import section1Img from "../assets/images/section1.png";
 import section2Img from "../assets/images/section2.png";
 import ShowreelButton from "../components/Button/ShowreelButton";
 
-//for image if needed
-/*
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Clothing 1"
-                className="w-full h-48 object-cover rounded-t-xl"
-              />
-              */
-
 const Home = () => {
-
   {/* This allows for access to all the products which is used to display our inventory */}
   const { data, loading } = useQuery(QUERY_ALL_PRODUCTS);
   console.log(data);
