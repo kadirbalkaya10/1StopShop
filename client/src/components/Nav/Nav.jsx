@@ -213,7 +213,7 @@ const CartDropdown = () => {
 const Nav = () => {
   return (
     <div className="skeleton w-full h-24 flex flex-col justify-center items-center">
-3:54
+
 <div className="navbar bg-base-500">
         <div className="flex-1">
           <Link to="/" className="btn btn-ghost text-xl">
