@@ -34,8 +34,8 @@ const productSchema = new Schema({
 	},
 });
 
-// Creating a model named "Apparel" based on the userSchema
+// Creating a model named "Product" based on the userSchema
 const Product = mongoose.model('Product', productSchema, 'Product');
 
-// Exporting the Apparel model
+// Exporting the Product model
 module.exports = Product;

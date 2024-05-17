@@ -3,52 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-// import { useEffect } from 'react';
-// import { loadStripe } from '@stripe/stripe-js';
-// import { useLazyQuery } from '@apollo/client';
-// import { QUERY_CHECKOUT } from '../../utils/queries';
-// import { useState } from 'react';
-
-// // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-// const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
 const Cart = () => {
-  // const [state, setState] = useState();
-  // const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
-  // // We check to see if there is a data object that exists, if so this means that a checkout session was returned from the backend
-  // // Then we should redirect to the checkout with a reference to our session id
-  // useEffect(() => {
-  //   if (data) {
-  //     stripePromise.then((res) => {
-  //       res.redirectToCheckout({ sessionId: data.checkout.session });
-  //     });
-  //   }
-  // }, [data]);
-
-  // // If the cart's length or if the dispatch function is updated, check to see if the cart is empty.
-  // // If so, invoke the getCart method and populate the cart with the existing from the session
-
-  // function calculateTotal() {
-  //   let sum = 0;
-  //   state.cart.forEach((item) => {
-  //     sum += item.price * item.purchaseQuantity;
-  //   });
-  //   return sum.toFixed(2);
-  // }
-
-  // // When the submit checkout method is invoked, loop through each item in the cart
-  // // Add each item id to the productIds array and then invoke the getCheckout query passing an object containing the id for all our products
-  // function submitCheckout() {
-
-  //   getCheckout({
-  //     variables: { 
-  //       products: [...state.cart],
-  //     },
-  //   });
-  // }
-
   return (
     <div className="skeleton w-full h-full min-h-screen flex flex-col justify-center items-center">
       <header className="bg-white shadow flex-grow flex justify-center items-center w-full py-4">

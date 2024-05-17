@@ -23,17 +23,7 @@ const Signup = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
-    // try {
-    //   const { data } = await addUser({
-    //     //login from the auth.js
-    //     variables: { ...formState },
-    //   });
-    //   //Auth.login(data.login.token); //do we keep this so when they sign up they're logged in
-    //   console.log(data);
-    // } catch (error) {
-    //   console.error(error);
-    // }
-    //clear form values with setFormState
+    //adds a user
     const mutationResponse = await addUser({
       variables: {
       email: formState.email,
@@ -42,6 +32,7 @@ const Signup = () => {
       password: formState.password,
     },
   });
+  //authenticates once they sign up
   const token = mutationResponse.data.addUser.token;
   Auth.login(token);
   }; 

@@ -4,7 +4,7 @@
         "name": "green-tee-top",
         "description": "green oversized t-shirt",
         "price": 24.99,
-        "image": "/shopping.webp",
+        "image": "/green.jpg",
         "quantity": 10
     },
     {
@@ -12,7 +12,7 @@
         "name": "baby-blue-top",
         "description": "blue crop top baby tee",
         "price": 19.99,
-        "image": "data:image/webp;base64,UklGRvgEAABXRUJQVlA4IOwEAABwIACdASqMAKAAPj0eikQiIaEUqizgIAPEs4BpUoCWP8YPM75dJPe2cb+e3/C+rvbN+ZnzXfQ7/kOmP9X30K+mRaZGKXvdKIMiTE6riGqHlHWztI79nVQpZHf9vZX8BWd4U+VKcgJtiWxKU/ia7+i7R65dsBAOhWKXr3c3xOtPthvAhx+iOptsx1VkGDoQ+Xr5CbKElPnb+vJJspr//Nq9KY5j7dSYe3NK71Khi0gNObwUVz7H9jAybBxHnAFIFJzke3hi2RtL2yzDYn/DMtLYOSNf778LkpjGkRJ4bPvWe58SFS7N/qUl6jD/JetsAEy9uCrxRHfjNS2d00Rqarcbve4ZodrDOXrcuPYAAP7/XQODZygDXuUOU0S2D9WcS31OuaFgwGtXEHrE5eUsu+yhsjxGJw3ZpnYGH4+QqhYa1M2Vat7BTBJw3O75rvuiHLfiVktHHSNcJMd4J0Cz3dF/HHye/hcEbI/qX9e0OIuClc3fAMNtQgyXIDZQXHVNoxmUme0mHegmJ4aLO6gxRUAz42LQNu6A8KTafeNj30n+qfnQjaBG/vBkeCwvhz6h59+UePlA94x43gxZufFwlU2IH5fiqA7PDKRe0g/cdbBVKC6GlKOg3tWiz4AqJWD0/1cR+kijv+0NX/tfyWI9sBiAG+sHIQvAkZrugMUqY6q4hngten3wunLVdDGcg6AyPxPGKFDS2xKGtg6xocZSRPR804o6mGYBIt2frwSEKR5GKF+dGqYC+4OGgtMmMUFyE+vXcYxRTtaPlIiMSne7FRoyQTLa4ugM//h5SktNst7ThrGWbOqEi/BK8CGztuUuHjfvwnr2mTfUbqXtj9EkczNfEC1KpV8Tw0V5pEJdLRjdYZWTqPDWV+w7Y5xEVAX16DOTwJLyFGfQnLegDjDzDYq3dWiJV7PitH5nq+x1gmkfvsXK9eZ4MwbUy7xgJ0fv302yi+80+jJcbjoUu2zyQyL8pM1kYakb7k+b0CnHaA+w960rFqM4QJgKkiaa5TuR5c1y/d86URtbwv9nvbhjZCMRmJGUn+OSKC+Jdv5qVPXTbej/endUv0mlsTKoEHkYz4284PIpjyZYcSrDiZj0n13xZebsQ1UMpC3J45YC4Z7H+DTlzCnKxfTecRUG5TklqxYxIy5L85vUVE812dE0ZYAgVZCIu7xZPSPjsaVrGFJ7OYtACqWZRnhPD7aTeirQA7+tag88hTGE3xs2DX3y7D6jhX4qCR65qD5SeSBJha3ZQA8nlWN2jPaoLtuuZCTWXq6TsSl3lp7EflAL6o55KKrWIljXKmzMOVHgdv7miFFMtQ/1nOzXaWwqVzUO7NL6AfaZjqixT12yirTr/iGWqeIC5EB2AzRcY7g8XNZphHBEgZDDx2j+mKeHBJ0q8/qyUVngE5+qBIklqMxmsN7ld3soOksaj93RXdFNpaAFROIdF356KSzjkwRIzBItJhE889G4AGXHkQI57mEie28NzunCEf+D5wTXo0CYLZTiSdp7KQyffuEpfVDBtfrhsrUinRTY/oNj1QpHQPwzETiIs/6XLXS93KXjJj0sJ9L6dxnGkjOrU7zjPGBjqDLW/qa1Y2v3iHQYQ5z3mjeKNvPsggLl3JCaeijNH4zrkO8AlbbbI3KUIgNVRTF3EiSx2gB/mjDkUgxtE1yfhGvHAAA=",
+        "image": "/blue.jpg",
         "quantity": 10
     },
     {
@@ -20,7 +20,7 @@
         "name": "90s-denim-bottoms",
         "description": "straight leg denim jeans",
         "price": 49.99,
-        "image": "/90sjeans.webp",
+        "image": "/jeans.webp",
         "quantity": 10
     },
     {
@@ -28,7 +28,7 @@
         "name": "denim-shorts",
         "description": "denim shorts, slightly distressed",
         "price": 29.99,
-        "image": "/denimshorts.webp",
+        "image": "/shorts.webp",
         "quantity": 10
     },
     {
@@ -36,7 +36,7 @@
         "name": "cozy-shoes",
         "description": "fluffy interior slipper-shoe with durable exterior",
         "price": 79.99,
-        "image": "/cozyshoes.jpg",
+        "image": "/shoes.jpg",
         "quantity": 20
     }
 ]

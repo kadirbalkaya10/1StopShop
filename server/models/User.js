@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
 // Destructuring Schema from mongoose
-
 const { Schema } = mongoose;
 // Defining the schema for the user collection
 const userSchema = new Schema({
@@ -34,6 +33,7 @@ const userSchema = new Schema({
 	}],
 });
 
+//saves password and hashes it
 userSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
